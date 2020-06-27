@@ -26,7 +26,7 @@ async def time_check():
     sleepTime = 0
     # 現在の時刻
     now = datetime.now().strftime('%H:%M')
-    if now == '23:25':
+    if now == '23:32':
         print(now)
         await SendMessage()
         #該当時間だった場合は２重に投稿しないよう３０秒余計に待機
