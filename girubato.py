@@ -3,7 +3,7 @@ import discord
 from discord.ext import tasks
 from datetime import datetime 
 
-TOKEN = "NzI2NDE0NjY5Nzg2NjQ0NDkw.Xvc9Qw.31Vd8SPzhnAv70gG1KWZDQ93UWs" #トークン
+TOKEN = os.environ['DISCORD_BOT_TOKEN'] #トークン
 CHANNEL_ID = 704288269998751854 #チャンネルID
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
@@ -26,7 +26,7 @@ async def time_check():
     sleepTime = 0
     # 現在の時刻
     now = datetime.now().strftime('%H:%M')
-    if now == '23:32':
+    if now == '23:40':
         print(now)
         await SendMessage()
         #該当時間だった場合は２重に投稿しないよう３０秒余計に待機
